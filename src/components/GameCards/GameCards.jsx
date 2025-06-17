@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './GameCards.css'; // Add styles separately or inline
+import './GameCards.css'; 
 
 
 
-const GameCards = () => {
+const GameCards = ({handleGameSelection}) => {
   
   return (
     <>
@@ -12,7 +12,7 @@ const GameCards = () => {
         <div className="game-card" >
           <h2>Tic Tac Toe</h2>
           <p>Play the classic X and O game!</p>
-          <button onClick={console.log('tic tac toe')}>Play Now</button>
+          <button onClick={() => handleGameSelection('tictactoe')}>Play Now</button>
         </div>
 
         <div className="game-card" >
