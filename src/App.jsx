@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
 import WelcomePage from './components/WelcomePage/WelcomePage'
+import GameCards from './components/GameCards/GameCards';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
   return (
     <>
       {!button ? <WelcomePage setButton={setButton} /> : null}
+      {button ? <GameCards /> : null}
     </>
   )
 }
