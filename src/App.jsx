@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import './App.css'
+import WelcomePage from './components/WelcomePage/WelcomePage'
+
 
 function App() {
+  
+  const [button, setButton] = useState(false);
+
   return (
-    <div>App</div>
+    <>
+      {!button ? <WelcomePage setButton={setButton} /> : null}
+    </>
   )
 }
 
 export default App
+
+
 
 {/*git init
 git add README.md

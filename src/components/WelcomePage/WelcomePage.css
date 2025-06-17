@@ -1,0 +1,79 @@
+/* src/components/WelcomePage.css */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.welcome-page {
+  height: 100vh;
+  background: radial-gradient(circle at center, #0f0f0f, #000000 80%);
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  /* optional star background */
+  font-family: 'Orbitron', sans-serif;
+  animation: gradientShift 10s ease infinite;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.overlay {
+  background: linear-gradient(145deg, #1a1a2e, #16213e);
+  box-shadow: 0 0 20px #00ffe7, inset 0 0 10px #00ffe7;
+  color: #00ffe7;
+  border: 2px solid #00ffe7;
+  padding: 3rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 90%;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.overlay p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.get-started-btn {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background-color: #ff3c3c;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.get-started-btn:hover {
+  background-color: #e03131;
+}
+
+@media screen and (max-width: 600px) {
+  .overlay {
+    margin: 1rem;
+  }
+
+  .overlay h1 {
+    font-size: 2rem;
+  }
+
+  .overlay p {
+    font-size: 1rem;
+  }
+}
