@@ -4,6 +4,7 @@ import WelcomePage from './components/WelcomePage/WelcomePage'
 import GameCards from './components/GameCards/GameCards';
 import TicTacToe from './components/Tic-Tac-Toe/TicTacToe';
 import background from '../src/assets/background.mp3'
+import RockPaperScissor from './components/RockPaperScissor/RockPaperScissor';
 
 
 function App() {
@@ -45,8 +46,10 @@ function App() {
       {button && game === null ? <GameCards handleGameSelection={handleGameSelection} /> : null}
       {menu === true ? <GameCards handleGameSelection={handleGameSelection} /> : null}
 
-      
+
       {game === 'tictactoe' && menu === false && <TicTacToe backToMenu={HandleMenu} />}
+
+      {game === 'rockpaperscissor' && menu === false && <RockPaperScissor backToMenu={HandleMenu} />}
     </>
   )
 }
@@ -54,10 +57,3 @@ function App() {
 export default App
 
 
-
-{/*git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/imabwahab/Gaming-Hub.git
-git push -u origin main */}

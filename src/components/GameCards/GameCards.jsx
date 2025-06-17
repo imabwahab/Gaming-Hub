@@ -1,7 +1,4 @@
-import React, { useState } from 'react';
 import './GameCards.css'; 
-
-
 
 const GameCards = ({handleGameSelection}) => {
   
@@ -18,7 +15,7 @@ const GameCards = ({handleGameSelection}) => {
         <div className="game-card" >
           <h2>Rock Paper Scissors</h2>
           <p>Test your luck and strategy!</p>
-          <button onClick={console.log('rockpaperscissor') } >Play Now</button>
+          <button onClick={() => handleGameSelection('rockpaperscissor')}>Play Now</button>
         </div>
 
         <div className="game-card" >
