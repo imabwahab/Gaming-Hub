@@ -5,6 +5,7 @@ import GameCards from './components/GameCards/GameCards';
 import TicTacToe from './components/Tic-Tac-Toe/TicTacToe';
 import background from '../src/assets/background.mp3'
 import RockPaperScissor from './components/RockPaperScissor/RockPaperScissor';
+import MemoryGame from './components/MemoryGame/MemoryGame';
 
 
 function App() {
@@ -33,7 +34,6 @@ function App() {
   }
 
   const handleGameSelection = (gameName) => {
-    console.log(`Game selected: ${gameName}`);
     setGame(gameName);
     setmenu(false)
   }
@@ -41,7 +41,7 @@ function App() {
 
 
   return (
-    <>
+    <div className='App'>
       {!button ? <WelcomePage setButton={setButton} /> : null}
       {button && game === null ? <GameCards handleGameSelection={handleGameSelection} /> : null}
       {menu === true ? <GameCards handleGameSelection={handleGameSelection} /> : null}
@@ -50,7 +50,9 @@ function App() {
       {game === 'tictactoe' && menu === false && <TicTacToe backToMenu={HandleMenu} />}
 
       {game === 'rockpaperscissor' && menu === false && <RockPaperScissor backToMenu={HandleMenu} />}
-    </>
+
+      {game === 'guessnumber' && menu === false && <MemoryGame backToMenu={HandleMenu} /> }
+    </div>
   )
 }
 

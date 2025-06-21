@@ -1,12 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Numans&display=swap');
+  
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Orbitron', sans-serif;
 }
 
-body{
-   background-color: #1e1e2f;
+body {
+  background-color: #1e1e2f;
   color: #fff;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+}
+
+.App{
+   animation: gradientShift 10s ease infinite;
+  background: radial-gradient(circle at center, #0f0f0f, #000000 80%);
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  min-height: 100vh;
+  /* optional star background */
 }

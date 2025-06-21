@@ -27,7 +27,7 @@ const GameCards = ({handleGameSelection}) => {
         <div className="game-card" >
           <h2>Guess the Number</h2>
           <p>Try to guess the number in the fewest tries!</p>
-          <button >Play Now</button>
+          <button onClick={() => handleGameSelection('guessnumber')}>Play Now</button>
         </div>
       </div>
 

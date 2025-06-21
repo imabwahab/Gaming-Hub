@@ -1,17 +1,11 @@
-
-
 .game {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   text-align: center;
   padding: 2rem 1rem;
-  background: radial-gradient(circle at center, #0f0f0f, #000000 80%);
-  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
- animation: gradientShift 10s ease infinite;
- min-height: 90vh;
+  min-height: 90vh;
 }
 
 h2 {
@@ -66,12 +60,14 @@ h2 {
   from {
     box-shadow: 0 0 5px #61dafb, 0 0 10px #61dafb;
   }
+
   to {
     box-shadow: 0 0 20px #61dafb, 0 0 30px #61dafb;
   }
 }
 
-.reset , .back {
+.reset,
+.back {
   margin: 10px;
   padding: 10px 20px;
   font-size: 1rem;
@@ -91,15 +87,17 @@ h2 {
 @media (max-width: 500px) {
   .board {
     grid-template-columns: repeat(3, 70px);
-    gap: 6px;
+    gap: 10px;
   }
 
   .cell {
     width: 70px;
     height: 70px;
     font-size: 1.5rem;
+    gap: 10px;
   }
 }
+
 @media (max-width: 400px) {
   .board {
     grid-template-columns: repeat(3, 60px);
