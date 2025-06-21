@@ -1,0 +1,63 @@
+.memory-board {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+  gap: 10px;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.memory-cell {
+  background-color: #2b2b3d;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: transform 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+.memory-cell.flipped {
+  background-color: #44475a;
+  transform: scale(1.05);
+}
+
+.memory-cell.matched {
+  background: linear-gradient(to right, #00ffe7, #4b0082);
+  /* red to indigo */
+  font-weight: bold;
+}
+
+.congrats-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  max-width: 80%;
+  background: linear-gradient(to right, #00ffe7, #4b0082);
+  /* red to indigo */
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(76, 175, 80, 0.6);
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .memory-board {
+    grid-template-columns: repeat(4, 60px);
+    gap: 8px;
+  }
+
+  .memory-cell {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+
+  .congrats-message {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
